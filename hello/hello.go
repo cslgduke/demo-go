@@ -3,9 +3,16 @@ package main
 import (
 	"example.com/greetings"
 	"fmt"
+	"log"
 )
 
 func main() {
-	message := greetings.Hello("Dave")
+	log.SetPrefix("greetings: ")
+	log.SetFlags(0)
+	message, err := greetings.Hello("Dave")
+
+	if err != nil {
+		log.Fatal(err)
+	}
 	fmt.Println(message)
 }
