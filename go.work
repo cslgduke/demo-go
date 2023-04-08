@@ -3,6 +3,8 @@ go 1.20
 use (
 	./data-access
 	./example
+	./fuzz
+	./generics
 	./hello
 	./web-service-gin
 )
